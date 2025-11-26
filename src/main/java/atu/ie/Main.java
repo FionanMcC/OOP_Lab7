@@ -1,12 +1,25 @@
 package atu.ie;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Person myPerson = new Person();
-        System.out.println(myPerson.toString());
-        Customer myCustomer = new Customer("Fionán", "Loughrea", "2222", 12, true);
-        System.out.println(myCustomer.toString());
+
+        PreferredCustomer pc = new PreferredCustomer();
+
+        pc.setName("Charlie Customer");
+        pc.setAddress("3 Middle Road");
+        pc.setPhoneNumber("0871112222");
+        pc.setCustomerNumber(2001);
+        pc.setMailingList(true);
+
+        // First print
+        System.out.println("Initial: " + pc);
+
+        // Add 700 points
+        pc.addLoyaltyPoints(700);
+        System.out.println("After adding 700: " + pc);
+
+        // Add another 800 points
+        pc.addLoyaltyPoints(800);
+        System.out.println("After adding 800: " + pc);
     }
 }
